@@ -13,11 +13,30 @@
 
     <!-- Bootstrap core CSS -->
     <link href="/style/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for this page -->
+    <link href="/style/sb.css" rel="stylesheet">
+
   </head>
 
   <body>
-    <div class="container">
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav">
+          <a class="nav-link" href='/'> Home </a>
+          <a class="nav-link" href='/'> About </a>
+          <a class="nav-link" href='/'> Imprint </a>
+        </nav>
+      </div>
+    </div>
+    <div class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">
+          storiesboard blog
+        </h1>
+        <p class="lead blog-description">
+          artificial intelligence for everyone.
+        </p>
+      </div>
     </div>
     {{template "Content" .}}
 
