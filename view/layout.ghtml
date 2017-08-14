@@ -8,7 +8,7 @@
     <meta name="description" content="storiesboard hompage">
     <meta name="author" content="marcel schlimper">
     <!-- link rel="icon" type="image/png" href="/style/favicon-32x32.png" sizes="32x32" / -->
-
+    <link href="https://fonts.googleapis.com/css?family=Halant:300" rel="stylesheet">
     <title>storiesboard</title>
 
     <!-- Bootstrap core CSS -->
