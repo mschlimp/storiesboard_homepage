@@ -1,0 +1,157 @@
+{{define "Content"}}
+  <div class="blog-post">
+    <div class="card-deck">
+
+      <div class="card border-secondary">
+        <img class="card-img-top" src="/images/me.jpeg" alt="master of the universe">
+      </div>
+
+      <div class="card border-primary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Marcel Schlimper</h6>
+          <p class="card-text"> Software Developer </p>
+          <p class="card-text text-small">
+            phone: +49 (0) 176 494 88 501
+            <br> mail: ms (at) storiesboard.de
+            <br> github: <a href="https://github.com/mschlimp" class="card-link" target="blank">github</a>
+            <br> twitter: <a href="https://www.twitter.com/mschlimp" class="card-link" target="blank ">twitter</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="card border-secondary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Ruby (on Rails)</h6>
+          <p class="card-text">11 years experience in several projects and different requirements.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-deck">
+
+      <div class="card border-primary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Ruby (on Rails) Praxis</h6>
+          <p class="card-text">Development of a construction application for a real estate company.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <span class="badge badge-primary">Microsoft Azure</span>
+          <span class="badge badge-primary">Ruby on Rails</span>
+          <span class="badge badge-primary">Phussion Passenger</span>
+          <span class="badge badge-primary">Nginx Webserver</span>
+          <span class="badge badge-primary">Postgres</span>
+          <span class="badge badge-primary">Delayed Jobs</span>
+          <span class="badge badge-primary">SOAP API</span>
+          <span class="badge badge-primary">SAP Integration</span>
+          <span class="badge badge-primary">REST API</span>
+        </div>
+      </div>
+
+      <div class="card border-primary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Ruby (on Rails) Praxis</h6>
+          <p class="card-text">Development of a Voice Plattform to make a large set of concurrent outbound calls. A Twitter per Voice.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <span class="badge badge-primary">Amazon EC2</span>
+          <span class="badge badge-primary">S3</span>
+          <span class="badge badge-primary">SNS</span>
+          <span class="badge badge-primary">SES</span>
+          <span class="badge badge-primary">Ruby on Rails</span>
+          <span class="badge badge-primary">Phussion Passenger</span>
+          <span class="badge badge-primary">Apache Webserver</span>
+          <span class="badge badge-primary">MySQL</span>
+          <span class="badge badge-primary">Delayed Jobs</span>
+          <span class="badge badge-primary">Sidekiq</span>
+          <span class="badge badge-primary">REST API</span>
+        </div>
+      </div>
+
+      <div class="card border-primary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Ruby (on Rails) Praxis</h6>
+          <p class="card-text">Development of a mobile realtime bidding admin interface for data based advertisement.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <span class="badge badge-primary">Google Compute Engine</span>
+          <span class="badge badge-primary">Ruby on Rails</span>
+          <span class="badge badge-primary">Phussion Passenger</span>
+          <span class="badge badge-primary">Apache Webserver</span>
+          <span class="badge badge-primary">Redis</span>
+          <span class="badge badge-primary">MySQL</span>
+          <span class="badge badge-primary">Kafka</span>
+          <span class="badge badge-primary">BigQuery</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-deck">
+
+      <div class="card border-primary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Ruby (on Rails) Praxis</h6>
+          <p class="card-text">Development a set of Rails Applications (Frontend / Backend) to adminstrate customer systems.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <span class="badge badge-primary">Ruby on Rails</span>
+          <span class="badge badge-primary">Phussion Passenger</span>
+          <span class="badge badge-primary">MySQL</span>
+          <span class="badge badge-primary">Postgres</span>
+          <span class="badge badge-primary">Redis</span>
+          <span class="badge badge-primary">BigQuery</span>
+          <span class="badge badge-primary">3rd party integration</span>
+          <span class="badge badge-primary">REST API</span>
+        </div>
+      </div>
+
+      <div class="card border-second">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Golang</h6>
+          <p class="card-text">5 years experience in several web and api projects.</p>
+        </div>
+      </div>
+
+      <div class="card border-primary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Golang Praxis</h6>
+          <p class="card-text">Development of a mobile realtime bidding plattform for data based advertisement.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <span class="badge badge-primary">Google Compute Engine</span>
+          <span class="badge badge-primary">Go</span>
+          <span class="badge badge-primary">Go Webserver</span>
+          <span class="badge badge-primary">Redis</span>
+          <span class="badge badge-primary">Kafka</span>
+          <span class="badge badge-primary">BigQuery</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card-deck">
+      <div class="card border-second">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Node.js</h6>
+          <p class="card-text">1 years experience in node.js development.</p>
+        </div>
+      </div>
+
+      <div class="card border-primary">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Node.js Praxis</h6>
+          <p class="card-text">Development of a cookie proxy for a mobile advertisement solution.</p>
+        </div>
+        <div class="card-footer text-muted">
+          <span class="badge badge-primary">node.js</span>
+          <span class="badge badge-primary">node.js webserver</span>
+          <span class="badge badge-primary">npm</span>
+          <span class="badge badge-primary">http proxy</span>
+          <span class="badge badge-primary">aerospike</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{{end}}

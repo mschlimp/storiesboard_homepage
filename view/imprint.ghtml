@@ -1,0 +1,15 @@
+{{define "Content"}}
+<div class="blog-post">
+  <h2 class="blog-post-title">
+    Imprint
+  </h2>
+  <p>
+    Marcel Schlimper
+    <br>Hennigsdorfer Str. 27a
+    <br>13503 Berlin
+    <br>P: (0176) 494 88 501
+    <br>E: ms@storiesboard.de
+    <br>Inhaltlich Verantwortlicher gemäß i.S.d. §55 Absatz 2 RStV: Marcel Schlimper
+  </p>
+</div>
+{{end}}

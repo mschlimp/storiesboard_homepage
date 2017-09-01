@@ -5,5 +5,8 @@ handlers:
   - url: /style
     static_dir: style
 
+  - url: /images
+    static_dir: images
+
   - url: /.*
     script: _go_app

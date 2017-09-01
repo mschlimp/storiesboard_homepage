@@ -163,3 +163,11 @@ h6, .h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+.text-small {
+  font-size: 0.75rem;
+}
+
+.card-deck {
+  margin-bottom: 1rem;
+}
