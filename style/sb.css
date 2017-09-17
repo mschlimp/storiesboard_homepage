@@ -148,6 +148,11 @@ h6, .h6 {
   color: #999;
 }
 
+.code {
+  background-color: transparent;
+  color: black;
+  font-size: 0.6rem;
+}
 
 /*
  * Footer

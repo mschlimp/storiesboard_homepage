@@ -1,0 +1,412 @@
+{{define "Content"}}
+  <div class="blog-post">
+    <h2 class="blog-post-title">
+      Fetch data from external sources
+    </h2>
+    <p class="blog-post-meta">
+      September 17, 2017 by
+      <a href="/about">
+        Marcel Schlimper
+      </a>
+    </p>
+
+    <p>
+      How to collect and store data for artificial intelligence models.
+    </p>
+
+    <hr>
+
+    <p>
+      In this blog post I will have a look of the first kind of data to use for later ai projects.
+    </p>
+
+    <p>
+      In the web there are a lot of picture data sets for object recognition by ai. In this blog I will start with a complete different approach.
+      I will use crypto currency data and try to predict the next day value.
+    </p>
+
+    <p>
+      The basic datasource for the currencies is the
+      <a href="https://coincap.io" target="blank"> coincap.io </a>
+      trading platform.
+      There are some hundred crypto currencies and a smart api to fetch historical, daily and
+      intraday based data.
+    </p>
+
+    Here some samples for capcoin requests:
+    <div  class="alert alert-info">
+      <span class="badge badge-light">coincap api for history data</span>
+      <br>
+      <code class="code">
+http://www.coincap.io/history/365day/BTC
+      </code>
+    </div>
+
+    <div  class="alert alert-info">
+      <span class="badge badge-light">coincap api for daily data</span>
+      <br>
+      <code class="code">
+http://www.coincap.io/history/1day/BTC
+      </code>
+    </div>
+
+    <div  class="alert alert-info">
+      <span class="badge badge-light">coincap api for intraday data</span>
+      <br>
+      <code class="code">
+http://www.coincap.io/page/BTC
+      </code>
+    </div>
+
+    <p>
+      The first question for working is how to store this data?
+      For the begin of this project I will use
+      <a href="https://cloud.google.com/appengine" target="blank"> Google AppEngine. </a>
+      There are a loot of free
+      <a href="https://cloud.google.com/appengine/quotas" target="blank"> quotas </a>
+      for the beginning of a project.
+      The most important quotas for the data import are the Datastore related quotas:
+      <img class="img-fluid" src="/images/201709_quotas.png"/>
+    </p>
+    <p>
+      For the storage of the data I use the Google Datastore. The related entity
+      to store this values looks like the following sample:
+    </p>
+
+    <pre>
+      <code class="code go">
+type CryptoCurrency struct {
+   Coin string
+   MarketCap int64
+   Volume int64
+   Price float64
+   Date time.Time
+   SimpleData bool
+   Day5 float64
+   Day30 float64
+   Day200 float64
+   Day270 float64
+   Percentage float64
+   Percentage5 float64
+   Percentage30 float64
+   Percentage200 float64
+   Percentage270 float64
+ }
+      </code>
+    </pre>
+
+    <p>
+      To fetch the data I create a data pipeline that collect the api data and
+      create for every dataset a CryptoCurrency entity.
+    </p>
+
+    <div class="row">
+      <div class="col">
+        <pre>
+<span class="badge badge-light">data from the api</span>
+          <code class="code go">
+{
+  "market_cap": [
+    [1505428170000, 54154377162],
+    ...
+  ],
+  "price": [
+    [1505428170000, 3269.01],
+    ...
+  ],
+  "volume": [
+    [1505428170000, 2691220000],
+    ...
+  ]
+}
+          </code>
+        </pre>
+      </div>
+      <div class="col">
+        <pre>
+<span class="badge badge-light">mapped to a CryptoCurrency Entity</span>
+          <code class="code go">
+var currency CryptoCurrency
+currency.Coin      = "BTC"
+currency.MarketCap = 54154377162
+currency.Volume    = 2691220000
+currency.Price     = 3269.01
+currency.Date      = 2017-09-14 23:29:30
+...
+
+
+
+
+
+
+
+          </code>
+        </pre>
+      </div>
+    </div>
+    <p>
+      During this workflow I also create some indicators like the 30, 50, 100, 200
+      average values for later usage in the ai modeling. The Google AppEngine
+      calculates the costs by usage. In this case I have to pay the costs for the
+      read and write operations and the related instance usage. The following table
+      shows the costs for the used resources.
+    </p>
+
+    <div class="alert alert-warning">
+      <span class="badge badge-light">costs for processing and storing data</span>
+      <div class="row">
+        <div class="col">
+          700 currencies * 360 data sets
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          252 000 CryptoCurrency entities
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          252.000 entities * 34 write ops
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          8.568.000 write ops
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          252.000 entities * 200 days * 2 read ops
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          100.800.000 read ops
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          8.568.000 write ops
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          18.50 $
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          100.800.000 read ops
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          72.00 $
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          1 Instance ( 12.50 h for 24h availability)
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          0.00 $
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <b>Sum</b>
+        </div>
+        <div class="col-1">
+          <b>=</b>
+        </div>
+        <div class="col">
+           <b>90.50 $</b>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Based on this first draft I have to pay $90 for every day. That a loot of money
+      realy simple data storage. The import of the data use a loot of read and
+      write operations of the used datastore. The reason for this is, that I prepair
+      the data for every day and also precalculate the average values for the
+      usage in a later process. What I also realized the the relas usage of the Instance
+      hours for the import is less than one hour. For the optimzation of the import
+      workflow I prepair the process to use more Instance hours and create less
+      read / write operation on the datastore.
+    </p>
+    <p>
+      The main step for this change is to minimize the size of the CryptoCurrency entity.
+      This smaller entity only stores the needed values to calculate all the relavant
+      indicators afterwards. The other optimization is, to use less attributes as possible.
+      Every string attribute of the entity need 2 write operations and is 1500 bytes long.
+      Based on the length for the given values we need max 4500 bytes per attribute to store a dataset
+      with max 300 values.
+      The updated CryptoCurrency entity looks like this sample:
+    </p>
+    <pre>
+      <code class="code go">
+type CryptoCurrency struct {
+  Coin string
+  Date time.Time
+  Timestamp1500 string
+  Timestamp3000 string
+  Timestamp4500 string
+  Price1500 string
+  Price3000 string
+  Price4500 string
+}
+      </code>
+    </pre>
+
+    <p>
+      To fetch the data I create a data pipeline that collect the api data and
+      create for every dataset a CryptoCurrency entity.
+    </p>
+
+
+    <div class="row">
+      <div class="col-6">
+        <pre>
+<span class="badge badge-light">data from the api</span>
+          <code class="code go">
+{
+  "market_cap": [
+    [1505428170000, 54154377162],
+    [1505428180000, 54154377163],
+    ...
+  ],
+  "price": [
+    [1505428170000, 3269.01],
+    [1505428180000, 3269.02],
+    ...
+  ],
+  "volume": [
+    [1505428170000, 2691220000],
+    [1505428180000, 2691230000],
+    ...
+  ]
+}
+          </code>
+        </pre>
+      </div>
+      <div class="col-6">
+        <pre>
+<span class="badge badge-light">updated mapping to a CryptoCurrency Entity</span>
+          <code class="code go">
+var currency CryptoCurrency
+currency.Coin           = "BTC"
+currency.Date           = 2017-09-14 23:29:30
+currency.Price1500      = "3269.01;3269.02"
+currency.Price3000      = ...
+currency.Price4500      = ...
+currency.TimeStamp1500  = "150542817,150542818"
+currency.TimeStamp3000  = ...
+currency.TimeStamp4500  = ...
+
+
+
+
+
+
+
+
+          </code>
+        </pre>
+      </div>
+    </div>
+    <p>
+      The single entries from the api data are concated to the related Price or
+      Timestamps attributes. For all need calculations the related prices and
+      timestamps are created after read the CryptoCurrency from the datastore.
+      For fetching and storing the data for the api to the datastore there are only
+      18 write ops needed.
+    </p>
+
+    <div class="alert alert-warning">
+      <span class="badge badge-light">costs for processing and storing data</span>
+      <div class="row">
+        <div class="col">
+          700 currencies
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          700 CryptoCurrency entities
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          700 entities * 18 write ops
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          12.600 write ops
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          700 * 0 read ops
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          0 read ops
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col">
+          12.600 write ops
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          0.00 $
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          0 read ops
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          0.00 $
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          1 Instance ( 0.81 h for 24h availability)
+        </div>
+        <div class="col-1">
+          =
+        </div>
+        <div class="col">
+          0.00 $
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <b>Sum</b>
+        </div>
+        <div class="col-1">
+          <b>=</b>
+        </div>
+        <div class="col">
+           <b>0.00 $</b>
+        </div>
+      </div>
+    </div>
+    <p>
+      After this optimization I can fetch the data every day without import costs.
+      If I store more than 1 GB in the datastore I have to pay for this but
+      this should need more than 100 days.
+    </p>
+  </div>
+{{end}}

@@ -1,6 +1,34 @@
 {{define "Content"}}
   <div class="blog-post">
     <h2 class="blog-post-title">
+      Fetch data from external sources
+    </h2>
+    <p class="blog-post-meta">
+      September 17, 2017 by
+      <a href="/about">
+        Marcel Schlimper
+      </a>
+    </p>
+
+    <p>
+        How to collect and store data for artificial intelligence models.
+    </p>
+
+    <hr>
+
+    <p>
+      In this blog post I will have a look of the first kind of data to use for later ai projects.
+    </p>
+
+    <p>
+      In the web there are a lot of picture data sets for object recognition by ai. In this blog I will start with a complete different approach.
+      I will use crypto currency data and try to predict the next day value.
+      <a href="/blogs/201709/crypto-currency-data"> more ... </a>
+    </p>
+  </div>
+
+  <div class="blog-post">
+    <h2 class="blog-post-title">
       about this blog
     </h2>
     <p class="blog-post-meta">
