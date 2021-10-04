@@ -1,0 +1,47 @@
+runtime: go111
+
+instance_class: F1
+automatic_scaling:
+  min_idle_instances: 0
+  max_idle_instances: 1
+  max_concurrent_requests: 50
+
+handlers:
+- url: /
+  secure: always
+  static_files: dist/elfenschoen-shop/index.html
+  upload: dist/elfenschoen-shop/.*
+- url: /(.*\.js)
+  secure: always
+  redirect_http_response_code: 301
+  static_files: dist/elfenschoen-shop/\1
+  upload: dist/elfenschoen-shop/.*\.js
+- url: /(.*\.css)
+  secure: always
+  redirect_http_response_code: 301
+  static_files: dist/elfenschoen-shop/\1
+  mime_type: text/css
+  upload: dist/elfenschoen-shop/.*\.css
+- url: /(.*\.svg)
+  secure: always
+  redirect_http_response_code: 301
+  static_files: dist/elfenschoen-shop/\1
+  upload: dist/elfenschoen-shop/.*\.svg
+- url: /(.*\.png)
+  secure: always
+  redirect_http_response_code: 301
+  static_files: dist/elfenschoen-shop/\1
+  upload: dist/elfenschoen-shop/.*\.png
+- url: /(.*\.jpg)
+  secure: always
+  redirect_http_response_code: 301
+  static_files: dist/elfenschoen-shop/\1
+  upload: dist/elfenschoen-shop/.*\.jpg
+- url: /favicon.ico
+  secure: always
+  static_files: dist/elfenschoen-shop/favicon.ico
+  upload: dist/elfenschoen-shop/.*
+- url: /.*
+  secure: always
+  static_files: dist/elfenschoen-shop/index.html
+  upload: dist/elfenschoen-shop/.*
