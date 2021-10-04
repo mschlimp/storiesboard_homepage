@@ -1,0 +1,32 @@
+@import '~@angular/material/theming';
+
+$app-primary: mat-palette($mat-indigo);
+$primary: mat-color($app-primary);
+
+.navi {
+    width: 100%;
+    z-index: 1000; 
+    background-color: $primary;
+  }
+  
+    
+    .toolbar-spacer {
+      flex: 1 1 auto;
+    }
+    
+    .action-space {
+        margin-left: 50px;
+    }
+  
+    .fixed-header {
+      position: fixed;
+    }
+  
+    .mat-menu-content {
+      background: blue;
+    }
+
+.mat-toolbar {
+    color: white;
+    background-color: $primary;
+}

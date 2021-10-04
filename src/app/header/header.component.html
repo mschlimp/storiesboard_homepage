@@ -1,0 +1,39 @@
+<mat-toolbar class='navi elfe-bg fixed-header' role='header'>
+    <mat-toolbar-row fxLayout="row">
+      storiesboard
+      <span class="toolbar-spacer"></span>
+      <div>
+      <!-- a mat-button [routerLink]="'/account'" fxHide.xs fxHide.sm> Mein Konto </a -->
+      <!-- a mat-button [routerLink]="'/basket'" fxHide.xs fxHide.sm> Warenkorb </a -->
+      <!-- a mat-button [routerLink]="'/sales'" fxHide.xs fxHide.sm> Angebote </a -->
+      <a mat-button [routerLink]="'/'" fxHide.xs fxHide.sm> About Me </a>
+      <a mat-button [routerLink]="'/security'" fxHide.xs fxHide.sm> Datenschutz </a>
+      <a mat-button [routerLink]="'/imprint'" fxHide.xs fxHide.sm> Impressum </a>
+      <!-- a mat-button [routerLink]="'/logout'" fxHide.xs fxHide.sm> Abbmelden </a -->
+      <!-- span class="nav-tool-items" fxHide.xs fxHide.sm>
+        <a mat-button mat-flat-button class='elfe-bg-dark elfe-grey-dark' [routerLink]="'/login'">Login</a>
+    </span -->
+      <ng-container>
+        <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs fxShow.sm>
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #dropMenu="matMenu" fxLayout="column" class="elfe-bg">
+          <!--a mat-button [routerLink]="'/account'"> Mein Konto </a>
+          <mat-divider></mat-divider>
+          <a mat-button [routerLink]="'/basket'"> Warenkorb </a>
+          <mat-divider></mat-divider>
+          <a mat-button [routerLink]="'/sales'"> Angebote </a>
+          <mat-divider></mat-divider -->
+          <a mat-button [routerLink]="'/'"> About me </a>
+          <mat-divider></mat-divider>
+          <a mat-button [routerLink]="'/security'"> Datenschutz </a>
+          <mat-divider></mat-divider>
+          <a mat-button [routerLink]="'/imprint'"> Impressum </a>
+          <!-- mat-divider></mat-divider>
+          <a mat-button [routerLink]="'/logout'"> Abbmelden </a -->
+        </mat-menu>
+      </ng-container>
+      </div>
+        
+    </mat-toolbar-row>
+    </mat-toolbar>

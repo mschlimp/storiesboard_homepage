@@ -19,7 +19,7 @@
 
 @import '~@angular/material/theming';
 
-$app-primary: mat-palette($mat-deep-purple);
+$app-primary: mat-palette($mat-indigo);
 $primary: mat-color($app-primary);
 
 .jumbo {
