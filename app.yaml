@@ -9,39 +9,39 @@ automatic_scaling:
 handlers:
 - url: /
   secure: always
-  static_files: dist/elfenschoen-shop/index.html
-  upload: dist/elfenschoen-shop/.*
+  static_files: dist/storiesboard/index.html
+  upload: dist/storiesboard/.*
 - url: /(.*\.js)
   secure: always
   redirect_http_response_code: 301
-  static_files: dist/elfenschoen-shop/\1
-  upload: dist/elfenschoen-shop/.*\.js
+  static_files: dist/storiesboard/\1
+  upload: dist/storiesboard/.*\.js
 - url: /(.*\.css)
   secure: always
   redirect_http_response_code: 301
-  static_files: dist/elfenschoen-shop/\1
+  static_files: dist/storiesboard/\1
   mime_type: text/css
-  upload: dist/elfenschoen-shop/.*\.css
+  upload: dist/storiesboard/.*\.css
 - url: /(.*\.svg)
   secure: always
   redirect_http_response_code: 301
-  static_files: dist/elfenschoen-shop/\1
-  upload: dist/elfenschoen-shop/.*\.svg
+  static_files: dist/storiesboard/\1
+  upload: dist/storiesboard/.*\.svg
 - url: /(.*\.png)
   secure: always
   redirect_http_response_code: 301
-  static_files: dist/elfenschoen-shop/\1
-  upload: dist/elfenschoen-shop/.*\.png
+  static_files: dist/storiesboard/\1
+  upload: dist/storiesboard/.*\.png
 - url: /(.*\.jpg)
   secure: always
   redirect_http_response_code: 301
-  static_files: dist/elfenschoen-shop/\1
-  upload: dist/elfenschoen-shop/.*\.jpg
+  static_files: dist/storiesboard/\1
+  upload: dist/storiesboard/.*\.jpg
 - url: /favicon.ico
   secure: always
-  static_files: dist/elfenschoen-shop/favicon.ico
-  upload: dist/elfenschoen-shop/.*
+  static_files: dist/storiesboard/favicon.ico
+  upload: dist/storiesboard/.*
 - url: /.*
   secure: always
-  static_files: dist/elfenschoen-shop/index.html
-  upload: dist/elfenschoen-shop/.*
+  static_files: dist/storiesboard/index.html
+  upload: dist/storiesboard/.*
