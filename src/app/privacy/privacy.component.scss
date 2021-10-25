@@ -1,0 +1,135 @@
+.drvn-color {
+    color: #5cb85c;
+    border-top-color:  #5cb85c;
+  }
+  
+  .content {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+  }
+  
+  .title {
+    font-size: 3em;
+    font-weight: 300;
+    padding-left: 0.1em;
+  }
+  
+  .libre {
+    padding-left: 1em;
+  }
+  
+  .title-claim {
+    font-size: 3em;
+    font-weight: 200;
+  }
+  
+  .mat-toolbar {
+    background: white;
+  }
+  
+  .mat-list-item.title-claim {
+    height: 75px;
+  }
+  
+  .mat-list-item.title-subclaim {
+    height: 50px;
+    padding-bottom: 0.5em;
+  }
+  
+  .mat-list-item.title-subclaim-big {
+    font-size: 2em;
+    font-weight: 100;
+    height: 50px;
+    padding-bottom: 0.5em;
+  }
+  
+  .mat-list-item.title-subclaim {
+    font-size: 1.5em;
+    font-weight: 200;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .prepair {
+      border-top-color: #A50040;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  a.prepair {
+    text-decoration: none;
+    border-bottom: 2px solid;
+    border-color: #A50040;
+    color: inherit;
+  }
+  
+  a.prepair:hover {
+    color: #A50040;
+  }
+  
+  .train {
+      border-top-color: #7700CC;
+  }
+  
+  a.train {
+    text-decoration: none;
+    border-bottom: 2px solid;
+    border-color: #7700CC;
+    color: inherit;
+  }
+  
+  a.train:hover {
+    color: #7700CC;
+  }
+  
+  .validate {
+      border-top-color: #3700CC;
+  }
+  a.validate {
+    text-decoration: none;
+    border-bottom: 2px solid;
+    border-color: #3700CC;
+    color: inherit;
+  }
+  
+  a.validate:hover {
+    color: #3700CC;
+  }
+  
+  .run {
+      border-top-color: #B09500;
+  }
+  
+  a.run {
+    text-decoration: none;
+    border-bottom: 2px solid;
+    border-color: #B09500;
+    color: inherit;
+  }
+  
+  a.run:hover {
+    color: #B09500;
+  }
+  
+  .toolbar-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .small {
+      font-size: 0.6em;
+  }
+  
+  .text-left {
+      text-align: left;
+  }
+  
+  .privacy {
+      font-family: '"Titillium Web", sans-serif;';
+      text-align: left;
+  }
+  
