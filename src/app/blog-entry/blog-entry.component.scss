@@ -1,0 +1,37 @@
+@use '~@angular/material' as mat;
+$app-primary: mat.define-palette(mat.$indigo-palette);
+$primary: mat.get-color-from-palette($app-primary);
+
+.blog-title {
+    font-size: 2em;
+    padding-top: 1em;
+    padding-bottom: 0.2em;
+}
+
+.blog-date {
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+.blog-disclaimer {
+    font-size: 0.9em;
+}
+
+.blog-starting-text {
+    margin-top: 1em;
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+.blog-button {
+    padding-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mat-stroked-button {
+    border-color: $primary;
+}

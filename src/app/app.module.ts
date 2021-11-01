@@ -20,6 +20,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { HeaderComponent } from './header/header.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacyComponent } from './privacy/privacy.component';
+import { DaoOverviewComponent } from './dao-overview/dao-overview.component';
+import { BlogEntryComponent } from './blog-entry/blog-entry.component';
 
 
 
@@ -29,7 +31,9 @@ import { PrivacyComponent } from './privacy/privacy.component';
     LandingComponent,
     HeaderComponent,
     ImprintComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    DaoOverviewComponent,
+    BlogEntryComponent
   ],
   imports: [
     BrowserModule,

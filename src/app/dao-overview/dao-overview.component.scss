@@ -1,0 +1,39 @@
+@use '~@angular/material' as mat;
+$app-primary: mat.define-palette(mat.$indigo-palette);
+$primary: mat.get-color-from-palette($app-primary);
+
+.content {
+    margin: auto;
+    padding-top: 100px;
+}
+
+.main-stream {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    height: 300px;
+    line-height: 300px;
+    width: 100%;
+    background-color: $primary;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: auto;
+    font-size: 3em;
+}
+
+.title-mobile {
+    height: 100px;
+    line-height: 50px;
+    width: 100%;
+    background-color: $primary;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: auto;
+    font-size: 0.5em;
+}
+
