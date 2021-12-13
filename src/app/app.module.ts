@@ -22,6 +22,11 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { DaoOverviewComponent } from './dao-overview/dao-overview.component';
 import { BlogEntryComponent } from './blog-entry/blog-entry.component';
+import { LeanOverviewComponent } from './lean-overview/lean-overview.component';
+import { ShortBlogEntry001Component } from './lean/short/short-blog-entry001/short-blog-entry001.component';
+import { DetailBlogEntry001Component } from './lean/detail/detail-blog-entry001/detail-blog-entry001.component';
+import { ShortLeanblogEntry002Component } from './lean/short/short-leanblog-entry002/short-leanblog-entry002.component';
+import { DetailLeanblogEntry002Component } from './lean/detail/detail-leanblog-entry002/detail-leanblog-entry002.component';
 
 
 
@@ -33,7 +38,12 @@ import { BlogEntryComponent } from './blog-entry/blog-entry.component';
     ImprintComponent,
     PrivacyComponent,
     DaoOverviewComponent,
-    BlogEntryComponent
+    BlogEntryComponent,
+    LeanOverviewComponent,
+    ShortBlogEntry001Component,
+    DetailBlogEntry001Component,
+    ShortLeanblogEntry002Component,
+    DetailLeanblogEntry002Component
   ],
   imports: [
     BrowserModule,

@@ -35,3 +35,33 @@ a {
 .mat-stroked-button {
     border-color: $primary;
 }
+
+.blog-picture {
+    img {
+        height: 250px;
+        width: 100%;
+    }
+}
+
+.blog-picture-mobile {
+    img {
+        height: 100px;
+        width: 100%;
+    }
+}
+
+.blog-divider {
+    margin-bottom: 2em;
+}
+
+.content {
+    margin: auto;
+    padding-top: 100px;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text {
+    font-size: large;
+}
