@@ -24,7 +24,6 @@
     "@angular/platform-browser": "~12.2.8",
     "@angular/platform-browser-dynamic": "~12.2.8",
     "@angular/router": "~12.2.8",
-    "angular2-cookie-law": "^7.0.1",
     "github-activity-feed": "^0.3.0",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
