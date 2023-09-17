@@ -3,15 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { CookieLawModule } from 'angular2-cookie-law';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './landing/landing.component';
@@ -56,9 +54,8 @@ import { DetailLeanblogEntry002Component } from './lean/detail/detail-leanblog-e
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
-    FlexLayoutModule,
     MatGridListModule,
-    CookieLawModule
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
