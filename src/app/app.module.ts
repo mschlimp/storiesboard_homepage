@@ -3,19 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatListModule} from '@angular/material/list';
-import {MatButtonModule} from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
+import {MatLegacyListModule as MatListModule} from '@angular/material/legacy-list';
+import {MatLegacyButtonModule as MatButtonModule} from '@angular/material/legacy-button';
+import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
 import { MatIconModule } from '@angular/material/icon';
-import { CookieLawModule } from 'angular2-cookie-law';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './landing/landing.component';
-import { MatCardModule } from '@angular/material/card';
+import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { HeaderComponent } from './header/header.component';
 import { ImprintComponent } from './imprint/imprint.component';
@@ -56,9 +54,8 @@ import { DetailLeanblogEntry002Component } from './lean/detail/detail-leanblog-e
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
-    FlexLayoutModule,
     MatGridListModule,
-    CookieLawModule
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
