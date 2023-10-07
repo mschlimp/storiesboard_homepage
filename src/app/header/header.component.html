@@ -6,17 +6,17 @@
       <!-- a mat-button [routerLink]="'/account'" fxHide.xs fxHide.sm> Mein Konto </a -->
       <!-- a mat-button [routerLink]="'/basket'" fxHide.xs fxHide.sm> Warenkorb </a -->
       <!-- a mat-button [routerLink]="'/sales'" fxHide.xs fxHide.sm> Angebote </a -->
-      <a mat-button [routerLink]="'/blog/lean'" fxHide.xs fxHide.sm> Lean Success</a>
-      <a mat-button [routerLink]="'/blog/dao'" fxHide.xs fxHide.sm> DAO </a>
-      <a mat-button [routerLink]="'/'" fxHide.xs fxHide.sm> About Me </a>
-      <a mat-button [routerLink]="'/privacy'" fxHide.xs fxHide.sm> Privacy </a>
-      <a mat-button [routerLink]="'/imprint'" fxHide.xs fxHide.sm> Imprint </a>
+      <!-- <a mat-button [routerLink]="'/blog/lean'" fxHide.xs fxHide.sm> Lean Success</a> -->
+      <a mat-button [routerLink]="'/blog/minus60'" *ngIf="isLarge"> #minus60 </a>
+      <a mat-button [routerLink]="'/'" fxHide.xs *ngIf="isLarge">About Me </a>
+      <a mat-button [routerLink]="'/privacy'" *ngIf="isLarge"> Privacy </a>
+      <a mat-button [routerLink]="'/imprint'" *ngIf="isLarge"> Imprint </a>
       <!-- a mat-button [routerLink]="'/logout'" fxHide.xs fxHide.sm> Abbmelden </a -->
       <!-- span class="nav-tool-items" fxHide.xs fxHide.sm>
         <a mat-button mat-flat-button class='elfe-bg-dark elfe-grey-dark' [routerLink]="'/login'">Login</a>
     </span -->
       <ng-container>
-        <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs fxShow.sm>
+        <button mat-icon-button [matMenuTriggerFor]="dropMenu" *ngIf="isSmall">
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #dropMenu="matMenu" fxLayout="column" class="elfe-bg">
@@ -26,9 +26,7 @@
           <mat-divider></mat-divider>
           <a mat-button [routerLink]="'/sales'"> Angebote </a>
           <mat-divider></mat-divider -->
-          <a mat-button [routerLink]="'/blog/lean'"> Lean Success </a>
-          <mat-divider></mat-divider>
-          <a mat-button [routerLink]="'/blog/dao'"> DAO </a>
+          <a mat-button [routerLink]="'/blog/minus60'"> #minus60 </a>
           <mat-divider></mat-divider>  
           <a mat-button [routerLink]="'/'"> About me </a>
           <mat-divider></mat-divider>

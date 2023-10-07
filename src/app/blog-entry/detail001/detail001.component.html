@@ -1,0 +1,196 @@
+<app-header></app-header>
+<div class='content'>
+    <div class='blog-entry'>
+        <div class='blog-picture' *ngIf="isLarge">
+            <img src="assets/minus60.png">
+        </div>
+        <div class='blog-picture-mobile' *ngIf="isSmall">
+            <img src="assets/minus60.png">
+        </div> 
+        <div class='blog-title'>
+            #minus60 Laufblog
+        </div>
+        <div class='blog-date'>
+            2023-09-30
+        </div> 
+        <div class='blog-text'>
+            <h1>Woche 1</h1>
+            <div class='text'>
+                <h2> Bisher </h2>
+                <p class='block'>
+                    Bereits während des letzten Halbmarathon kam die Idee, dass doch auch beim Marathon noch etwas gehen könnte. 
+                    In 2022 lag der Hauptfokus auf den 10 Kilometern. Das Ziel damals waren die 45 Minuten, welche bereits im Frùhsommer
+                    erreicht werden konnten. Damit kstand die Steigerung auf einen Halbmarathon mit einem Versuch einer neuen
+                    Bestzeit für 2022 nixchts mehr im Weg. Ziel sollte eine Zeit unter 1h:55min sein. Nach guten neuen
+                    Monaten Vorbereitung, gelang dies im Septmber beim Reinickendorfer Halbmarathon in Berlin mit 1h:42min.
+                    Die Motivation für eine neue Marathonbestzeit im darauf folgenden Jahr war damit gelegt. 
+                </p>
+                <p class='block'>
+                    Der letzte Marathon liegt mit 2016 bereits eingige Zeit zurück. Damals war das Laufen noch recht neu.
+                    Es war das dritte Jahr mit anhaltenden Bestzeiten auf 10 Kilometer und dem einen oder anderen Halbmarathon.
+                    Die Vorbereitung auf den Marathon ohne Plan führte jedoch zu diversen Verletzungen und praktisch keinen nachhaltigem
+                    Trainingserfolg. Damit war für den Marathon das Ziel ankommen, mit 4h:35min noch recht akzeptabel.    
+                </p>
+                <h2> Idee </h2>
+                <p class='block'>
+                    Das Ziel für 2024 ist der Münster Marathon im September. Bis dahin sollen mich 3 Marathontrainingspläne
+                    auf den Wettkampf vorbereiten und langsam auf das Tempo heranführen. Damit die Disziplin nicht auf der Strecke
+                    bleibt dient dieser Blog. Dokumentiert soll das Training, das aktuelle Gefühl und auch die Kalorienaufnahme werden. 
+                </p>
+                <h2> Woche 1 </h2>
+                <p class='block'>
+                    In der ersten Woche standen 3 Läufe zu je 8 km und ein lockerer 7 km Lauf auf dem Plan. Lauftempo
+                    spielt hier noch keine Rolle, es soll sich einfach entspannt und locker anfühlen. Als Ausgleich dient
+                    jeden Tag die halbe Strecke zum Büro. Die Lauftage waren Montag, Mittwoch, Freitag und Sonntag.
+                    Die Läufe fühlten sich entspannt locker an, die Sehnen sind noch etwas strapaziert vom Halbmarathon.
+                </p>
+                <h2> Statistik </h2>
+                <p class='block'>
+                    <mat-grid-list *ngIf="isLarge" cols="4" rowHeight="350px">
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined big-icon">
+                                        directions_run
+                                        </span><mat-card-title>Laufen</mat-card-title>
+                                    <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                25km <br>
+                                2h32min
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined">
+                                        flatware
+                                        </span>
+                                    <mat-card-title>Kalorien</mat-card-title>
+                                    <mat-card-subtitle>Verbrauch/Aufnahme</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                15.455 cal<br>
+                                17.756 cal
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                        <span class="material-symbols-outlined big-icon">
+                                            pedal_bike
+                                            </span>
+                                        <mat-card-title>Rad</mat-card-title>
+                                        <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    58km <br>
+                                    
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                            <span class="material-symbols-outlined">
+                                                trophy
+                                                </span>
+                                            
+                                        <mat-card-title>#minus60</mat-card-title>
+                                        <mat-card-subtitle>Stand</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    #minus21
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                    </mat-grid-list>
+                    <mat-grid-list *ngIf="isSmall" cols="1" rowHeight="150px">
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined big-icon">
+                                        directions_run
+                                        </span><mat-card-title>Laufen</mat-card-title>
+                                    <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                25km <br>
+                                2h32min
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined">
+                                        flatware
+                                        </span>
+                                    <mat-card-title>Kalorien</mat-card-title>
+                                    <mat-card-subtitle>Verbrauch/Aufnahme</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                15.455 cal<br>
+                                17.756 cal
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                        <span class="material-symbols-outlined big-icon">
+                                            pedal_bike
+                                            </span>
+                                        <mat-card-title>Rad</mat-card-title>
+                                        <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    58km <br>
+                                    
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                            <span class="material-symbols-outlined">
+                                                trophy
+                                                </span>
+                                            
+                                        <mat-card-title>#minus60</mat-card-title>
+                                        <mat-card-subtitle>Stand</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    #minus21
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                    </mat-grid-list>   
+                </p>
+            </div>     
+        </div>
+        <div class='blog-divider'>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,182 @@
+<app-header></app-header>
+<div class='content'>
+    <div class='blog-entry'>
+        <div class='blog-picture' *ngIf="isLarge">
+            <img src="assets/minus60.png">
+        </div>
+        <div class='blog-picture-mobile' *ngIf="isSmall">
+            <img src="assets/minus60.png">
+        </div> 
+        <div class='blog-title'>
+            #minus60 Laufblog
+        </div>
+        <div class='blog-date'>
+            2023-10-09
+        </div> 
+        <div class='blog-text'>
+            <h1>Woche 3 - Zehlendorfer Crosslauf</h1>
+            <div class='text'>
+                <h2> Training </h2>
+                <p class='block'>
+                    Dieses mal standen 4 Einheiten im Kalender. Am Motag ein langsamer 12 km Dauerlauf,
+                    welcher härter war als erwartet. Eigentlich bestand bis Kilometer 7 die permanente Lust 
+                    wieder umzudrehen. Die Beine fühlten sich wie Blei, schwer und träge. Irgendwie wie Stecker
+                    gezogen. Erst auf den letzten 5 Kilometer wurde es langsam besser. An solchen Tagen ist es
+                    dann besser in einer Gruppe zu laufen. Anderenfalls liegt Umdrehen und der Heimweg sehr nah.
+                </p>
+                <p class='block'>
+                    Am Mittwoch war Laufen mal in der Gruppe angesagt. In der Woche ist das Training immer am Abend. 
+                    Motiviert in der Gruppe waren die Beinchen aber wieder fit und das Training fühlte sich ganz gut an. 
+                    Aus den geplanten 10 Kilometer wurden dann doch Vierzehn mit 2 schnellen Kilometern zum Abschluss.
+                    Damit sah alles für den Volkscrosslauf in Zehlendorf gut aus.
+                </p>
+                <h2> Statistik </h2>
+                <p class='block'>
+                    <mat-grid-list *ngIf="isLarge" cols="4" rowHeight="350px">
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined big-icon">
+                                        directions_run
+                                        </span><mat-card-title>Laufen</mat-card-title>
+                                    <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                38,5 km <br>
+                                3h45min
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined">
+                                        flatware
+                                        </span>
+                                    <mat-card-title>Kalorien</mat-card-title>
+                                    <mat-card-subtitle>Verbrauch/Aufnahme</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                15.775 cal<br>
+                                15.613 cal
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                        <span class="material-symbols-outlined big-icon">
+                                            pedal_bike
+                                            </span>
+                                        <mat-card-title>Rad</mat-card-title>
+                                        <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    48km <br>
+                                    
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                            <span class="material-symbols-outlined">
+                                                trophy
+                                                </span>
+                                            
+                                        <mat-card-title>#minus60</mat-card-title>
+                                        <mat-card-subtitle>Stand</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    #minus27
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                    </mat-grid-list>
+                    <mat-grid-list *ngIf="isSmall" cols="1" rowHeight="150px">
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined big-icon">
+                                        directions_run
+                                        </span><mat-card-title>Laufen</mat-card-title>
+                                    <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                25km <br>
+                                2h32min
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined">
+                                        flatware
+                                        </span>
+                                    <mat-card-title>Kalorien</mat-card-title>
+                                    <mat-card-subtitle>Verbrauch/Aufnahme</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                15.455 cal<br>
+                                17.756 cal
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                        <span class="material-symbols-outlined big-icon">
+                                            pedal_bike
+                                            </span>
+                                        <mat-card-title>Rad</mat-card-title>
+                                        <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    58km <br>
+                                    
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                            <span class="material-symbols-outlined">
+                                                trophy
+                                                </span>
+                                            
+                                        <mat-card-title>#minus60</mat-card-title>
+                                        <mat-card-subtitle>Stand</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    #minus21
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                    </mat-grid-list>   
+                </p>
+            </div>     
+        </div>
+        <div class='blog-divider'>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>
