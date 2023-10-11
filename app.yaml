@@ -37,6 +37,11 @@ handlers:
   redirect_http_response_code: 301
   static_files: dist/storiesboard/\1
   upload: dist/storiesboard/.*\.jpg
+- url: /(.*\.jpeg)
+  secure: always
+  redirect_http_response_code: 301
+  static_files: dist/storiesboard/\1
+  upload: dist/storiesboard/.*\.jpeg  
 - url: /favicon.ico
   secure: always
   static_files: dist/storiesboard/favicon.ico
