@@ -28,6 +28,8 @@ import { DetailLeanblogEntry002Component } from './lean/detail/detail-leanblog-e
 import { Detail001Component } from './blog-entry/detail001/detail001.component';
 import { Detail002Component } from './blog-entry/detail002/detail002.component';
 import { Detail003Component } from './blog-entry/detail003/detail003.component';
+import { Detail004Component } from './blog-entry/detail004/detail004.component';
+import { Detail005Component } from './blog-entry/detail005/detail005.component';
 
 
 
@@ -47,7 +49,9 @@ import { Detail003Component } from './blog-entry/detail003/detail003.component';
     DetailLeanblogEntry002Component,
     Detail001Component,
     Detail002Component,
-    Detail003Component
+    Detail003Component,
+    Detail004Component,
+    Detail005Component
   ],
   imports: [
     BrowserModule,

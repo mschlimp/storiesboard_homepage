@@ -1,0 +1,189 @@
+<app-header></app-header>
+<div class='content'>
+    <div class='blog-entry'>
+        <div class='blog-picture' *ngIf="isLarge">
+            <img src="assets/minus60.png">
+        </div>
+        <div class='blog-picture-mobile' *ngIf="isSmall">
+            <img src="assets/minus60.png">
+        </div> 
+        <div class='blog-title'>
+            #minus60 Laufblog
+        </div>
+        <div class='blog-date'>
+            2023-10-23
+        </div> 
+        <div class='blog-text'>
+            <h1>Woche 5 - Letzte Pause </h1>
+            <div class='text'>
+                <h2> Training </h2>
+                <p class='block'>
+                    Zum Mittelpunkt der Woche stand wieder ein Tempolauf an. Der Gruppenlauf fiel aus, also konnte es etwas
+                    schneller zur Sache gehen. Die ersten und letzt 2 Kilometer waren zum Aufwärmen und Abkühlen,
+                    die 10 Kilometer in der Mitte das Tempo. Da es abends immer mehr Anstrengend für mich ist, war
+                    es auch dieses mal ein Laufen an der Seitenstechengrenze. Im ganzen aber ziemlich gut.  
+                </p>
+                <p class='block'>
+                    Samstag stand der erste lange Lauf in der Pause und vor berginn der ersten Trainingsphase zu #sub330 oder #minus60 an.
+                    6:30 Uhr war Start über 22 Kilometer. Um diese Zeit ist noch dunkel, was beim Einbiegen in den Wald auch auffiel, Lauflampe vergessen.
+                    Also Streckenrichtung geändert und zuerst die Straße und danach, deutlich heller, den Wald gelaufen.
+                    Der Lauf war extrem zäh. Entweeder hat das laufen im Dunkeln mit Laub auf den Wegen doch mehr 
+                    Energie gefordert als gedacht oder die Energiespeicher waren für einen frühen Nüchternlauf 
+                    doch zu leer. Die mitgenommen Verpflegungsquetschi aller 5 Kilometer, zeigten auch erst ab Kilometer
+                    15 zumindest eine positive mental Wirkung. Auf jedenfall blieb alles im Magen. 
+                </p>
+                <p class='block'>
+                    Der letzte Trainingstag der Woche, der Sonntag, wurde nach dem doch härteren Samsatg wieder in einen
+                    Spaziertag umfunktioniert. Damit war es eine entspannter Wochenausklang und die Bein fühlten sich am Ende
+                    auch wieder recht gut an. Damit kann der erste Marathon Trainingsplan in der kommenden Woche starten.  
+                </p>
+                <h2> Statistik </h2>
+                <p class='block'>
+                    <mat-grid-list *ngIf="isLarge" cols="4" rowHeight="350px">
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined big-icon">
+                                        directions_run
+                                        </span><mat-card-title>Laufen</mat-card-title>
+                                    <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                34 km <br>
+                                3h42min
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined">
+                                        flatware
+                                        </span>
+                                    <mat-card-title>Kalorien</mat-card-title>
+                                    <mat-card-subtitle>Verbrauch/Aufnahme</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                16.575 cal<br>
+                                11.599 cal
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                        <span class="material-symbols-outlined big-icon">
+                                            pedal_bike
+                                            </span>
+                                        <mat-card-title>Rad</mat-card-title>
+                                        <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    92 km <br>
+                                    
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                            <span class="material-symbols-outlined">
+                                                trophy
+                                                </span>
+                                            
+                                        <mat-card-title>#minus60</mat-card-title>
+                                        <mat-card-subtitle>Stand</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    #minus45
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                    </mat-grid-list>
+                    <mat-grid-list *ngIf="isSmall" cols="1" rowHeight="150px">
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined big-icon">
+                                        directions_run
+                                        </span><mat-card-title>Laufen</mat-card-title>
+                                    <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    34 km <br>
+                                3h42min
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined">
+                                        flatware
+                                        </span>
+                                    <mat-card-title>Kalorien</mat-card-title>
+                                    <mat-card-subtitle>Verbrauch/Aufnahme</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    16.575 cal<br>
+                                11.599 cal
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                        <span class="material-symbols-outlined big-icon">
+                                            pedal_bike
+                                            </span>
+                                        <mat-card-title>Rad</mat-card-title>
+                                        <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    91 km <br>
+                                    
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                            <span class="material-symbols-outlined">
+                                                trophy
+                                                </span>
+                                            
+                                        <mat-card-title>#minus60</mat-card-title>
+                                        <mat-card-subtitle>Stand</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    #minus45
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                    </mat-grid-list>   
+                </p>
+            </div>     
+        </div>
+        <div class='blog-divider'>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>

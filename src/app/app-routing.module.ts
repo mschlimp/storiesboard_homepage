@@ -10,6 +10,8 @@ import { DetailBlogEntry001Component } from './lean/detail/detail-blog-entry001/
 import { Detail001Component } from './blog-entry/detail001/detail001.component';
 import { Detail002Component } from './blog-entry/detail002/detail002.component';
 import { Detail003Component } from './blog-entry/detail003/detail003.component';
+import { Detail004Component } from './blog-entry/detail004/detail004.component';
+import { Detail005Component } from './blog-entry/detail005/detail005.component';
  
 const routes: Routes = [
   { path: 'imprint', component: ImprintComponent},
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'minus60/20230930/start_or_week_one', component: Detail001Component},
   { path: 'minus60/20231002/relaxed_week_two', component: Detail002Component},
   { path: 'minus60/20231009/zehlendorfer_crosslauf', component: Detail003Component},
+  { path: 'minus60/20231014/week_four', component: Detail004Component},
+  { path: 'minus60/20231023/last_week_before_sub400', component: Detail005Component},
   { path: '', component: LandingComponent }
 
 ];

@@ -1,0 +1,185 @@
+<app-header></app-header>
+<div class='content'>
+    <div class='blog-entry'>
+        <div class='blog-picture' *ngIf="isLarge">
+            <img src="assets/minus60.png">
+        </div>
+        <div class='blog-picture-mobile' *ngIf="isSmall">
+            <img src="assets/minus60.png">
+        </div> 
+        <div class='blog-title'>
+            #minus60 Laufblog
+        </div>
+        <div class='blog-date'>
+            2023-10-16
+        </div> 
+        <div class='blog-text'>
+            <h1>Woche 4 </h1>
+            <div class='text'>
+                <h2> Training </h2>
+                <p class='block'>
+                    Dienstag stand ein Fahrtspiel mit 1-2-3-2-1 Kilometern auf dem Trainingsplan. Irgendwie ist dieses Training nach Arbeit und am Abend nicht das Richtige.
+                    Gleich auf dem ersten Kilometer begannen die Seitenstechen wieder. Also erstmal Tempo spitzen rausgenommen. Dies brachte aber nicht die erhoffte
+                    Verbesserung. Scheinbar liegt mir diese Art Training am Abend einfach nicht. Damit wurde der Lauf dann auf eine Steigerungslauf umgestellt.
+                    In den einzelnen Abschnitten wurde das Tempo von langsamen Dauerlauf, auf lockeren Dauerlauf zu Tempodauerlauf gesteigert und wieder danach wieder reduziert.
+                </p>
+                <p class='block'>
+                    Am Mittwoch stand wieder ein Gruppenlauf über knapp 15 km an. Diese Läufe sind immer als langsame Dauerläufe konzipiert. Damit sind sie meist 
+                    einfach zu absolvieren. Auf diesem Tag war dies der Fall. Das Tempo lag mit 6:00 min/km bei einem entspannten Lauf. Die langsamen Läufe funktionieren am Abend
+                    sehr gut. Damit könnte ich in zukünftigen Trainingsplänen die entsprechenden Tempoläufe auf das Wochenende legen.
+                </p>
+                <p class='block'>
+                    Die restlichen Trainingseinheiten in dieser Woche fielen einer vorbeugenden Erkältungsprävention zum Opfer. Damit blieb diese Woche lauftechnisch
+                    unter ihren Erwartungen, da es aber noch kein voller Trainingsplan in einer entschiedenden Phase ist, stellt dies auch kein Problem dar.
+                    Besser Energie sammeln für die folgenden dunklen Herbst- und Winterwochen. 
+                </p>
+                <h2> Statistik </h2>
+                <p class='block'>
+                    <mat-grid-list *ngIf="isLarge" cols="4" rowHeight="350px">
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined big-icon">
+                                        directions_run
+                                        </span><mat-card-title>Laufen</mat-card-title>
+                                    <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                24 km <br>
+                                2h15min
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined">
+                                        flatware
+                                        </span>
+                                    <mat-card-title>Kalorien</mat-card-title>
+                                    <mat-card-subtitle>Verbrauch/Aufnahme</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                14.467 cal<br>
+                                14.664 cal
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                        <span class="material-symbols-outlined big-icon">
+                                            pedal_bike
+                                            </span>
+                                        <mat-card-title>Rad</mat-card-title>
+                                        <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    0 km <br>
+                                    
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                            <span class="material-symbols-outlined">
+                                                trophy
+                                                </span>
+                                            
+                                        <mat-card-title>#minus60</mat-card-title>
+                                        <mat-card-subtitle>Stand</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    #minus4
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                    </mat-grid-list>
+                    <mat-grid-list *ngIf="isSmall" cols="1" rowHeight="150px">
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined big-icon">
+                                        directions_run
+                                        </span><mat-card-title>Laufen</mat-card-title>
+                                    <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    24 km <br>
+                                    2h15min
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        <mat-grid-tile class="my-mat-grid-tile-content"> 
+                            <mat-card class="example-card">
+                                <mat-card-header>
+                                <mat-card-title-group>
+                                    <span class="material-symbols-outlined">
+                                        flatware
+                                        </span>
+                                    <mat-card-title>Kalorien</mat-card-title>
+                                    <mat-card-subtitle>Verbrauch/Aufnahme</mat-card-subtitle>
+                                </mat-card-title-group>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    14.467 cal<br>
+                                    14.664 cal
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                        
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                        <span class="material-symbols-outlined big-icon">
+                                            pedal_bike
+                                            </span>
+                                        <mat-card-title>Rad</mat-card-title>
+                                        <mat-card-subtitle>Kilometer</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    0 km <br>
+                                    
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                            <mat-grid-tile class="my-mat-grid-tile-content"> 
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                    <mat-card-title-group>
+                                            <span class="material-symbols-outlined">
+                                                trophy
+                                                </span>
+                                            
+                                        <mat-card-title>#minus60</mat-card-title>
+                                        <mat-card-subtitle>Stand</mat-card-subtitle>
+                                    </mat-card-title-group>
+                                    </mat-card-header>
+                                    <mat-card-content>
+                                    #minus4
+                                    </mat-card-content>
+                                </mat-card>
+                            </mat-grid-tile>
+                    </mat-grid-list>   
+                </p>
+            </div>     
+        </div>
+        <div class='blog-divider'>
+            <mat-divider></mat-divider>
+        </div>
+    </div>
+</div>
